@@ -1,28 +1,28 @@
-**Restaurant Management System 🍽️**
+# Restaurant Management System 🍽️
 
-  A Java Swing-based application for managing restaurant orders, billing, and inventory with an intuitive GUI interface.
+   A Java Swing-based application for managing restaurant orders, billing, and inventory with an intuitive GUI interface.
 
-**Key Features**
+## Key Features
 
-  🛒 Order Management: Add/remove items, set quantities
+* 🛒 Order Management: Add/remove items, set quantities
   
-💰 Billing System: Automatic total calculation with discount options (5%, 10%, 20%)
+* 💰 Billing System: Automatic total calculation with discount options (5%, 10%, 20%)
 
-📝 Order History: Track previous orders with timestamps
+* 📝 Order History: Track previous orders with timestamps
 
-📊 Interactive Menu: Visual food items with prices
+* 📊 Interactive Menu: Visual food items with prices
 
-🖥️ User-Friendly Interface: Clean layout with intuitive controls
+* 🖥️ User-Friendly Interface: Clean layout with intuitive controls
 
 
-**Technical Specifications**
+## Technical Specifications
   1. Built with Java Swing for GUI
   2. Uses event-driven programming (ActionListener, MouseListener)
   3. File I/O operations for order history
   4. DateTime formatting for receipts
   5. Image icons for menu items
 
-**How It Works**
+## How It Works
   1. Add food items to cart with quantities
   2. Apply discounts as needed
   3. Confirm orders and view billing
@@ -31,7 +31,7 @@
 Perfect for small restaurants or café management!
 
 
-**image**
+## DashBoard
 
 ![Screenshot 2025-06-08 124335](https://github.com/user-attachments/assets/9249e9b5-c6ff-48e7-99b2-89bc6fde1dc8)
 
