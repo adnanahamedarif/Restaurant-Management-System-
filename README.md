@@ -29,3 +29,10 @@
   4. Track order history in the sidebar
 
 Perfect for small restaurants or café management!
+
+
+**image**
+
+![Screenshot 2025-06-08 124335](https://github.com/user-attachments/assets/9249e9b5-c6ff-48e7-99b2-89bc6fde1dc8)
+
+![Screenshot 2025-06-08 124444](https://github.com/user-attachments/assets/f7cec340-7b28-4da4-ac7a-4aae2b3ee4a9)
