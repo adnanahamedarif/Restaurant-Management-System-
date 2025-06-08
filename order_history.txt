@@ -1,0 +1,31 @@
+Order at 2025/06/08 09:48:33:
+pizza X 2 = 600.0
+tea X 2 = 100.0
+
+======================
+Subtotal: 700.0
+Discount: 10.0%
+Total after discount: 630.0
+Date/Time: 2025/06/08 09:48:33
+
+
+Order at 2025/06/08 09:48:58:
+tea X 2 = 100.0
+
+======================
+Subtotal: 100.0
+Discount: 10.0%
+Total after discount: 90.0
+Date/Time: 2025/06/08 09:48:58
+
+
+Order at 2025/06/08 09:48:58:
+tea X 2 = 100.0
+
+======================
+Subtotal: 100.0
+Discount: 10.0%
+Total after discount: 90.0
+Date/Time: 2025/06/08 09:48:58
+
+
