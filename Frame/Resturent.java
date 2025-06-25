@@ -32,9 +32,9 @@ public class Resturent extends JFrame implements MouseListener, ActionListener {
         super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
 
-        //Button color
-        c1 = new Color(255, 0, 0);//red
-        c2 = new Color(255, 255, 255);//White
+        // color
+        c1 = new Color(255, 0, 0);// red
+        c2 = new Color(255, 255, 255);// White
         c3 = new Color(153, 230, 255); // light blue
         c4 = new Color(128, 191, 255); // medium light blue.
 
@@ -107,25 +107,25 @@ public class Resturent extends JFrame implements MouseListener, ActionListener {
         rb1 = new JRadioButton("0%");
         rb1.setBackground(c4);
         rb1.setOpaque(false);
-        rb1.setBounds(20, 410, 80, 30); //(x, y, width, height)
+        rb1.setBounds(20, 410, 80, 30); 
         rb1.setFont(f2);
         panel.add(rb1);
 
         rb2 = new JRadioButton("5%");
         rb2.setOpaque(false);
-        rb2.setBounds(100, 410, 90, 30); //(x, y, width, height)
+        rb2.setBounds(100, 410, 90, 30); 
         rb2.setFont(f2);
         panel.add(rb2);
 
         rb3 = new JRadioButton("10%");
         rb3.setOpaque(false);
-        rb3.setBounds(190, 410, 90, 30); //(x, y, width, height)
+        rb3.setBounds(190, 410, 90, 30); 
         rb3.setFont(f2);
         panel.add(rb3);
 
         rb4 = new JRadioButton("20%");
         rb4.setOpaque(false);
-        rb4.setBounds(280, 410, 90, 30); //(x, y, width, height)
+        rb4.setBounds(280, 410, 90, 30); 
         rb4.setFont(f2);
         panel.add(rb4);
 
@@ -349,30 +349,37 @@ public class Resturent extends JFrame implements MouseListener, ActionListener {
         }
     }
 
-    private String getCurrentDateTime() {
+    private String getCurrentDateTime() 
+	{
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
         return dtf.format(now);
     }
 
-    private void cart() {
-        StringBuilder cart = new StringBuilder();
+    private void cart() 
+    {
+        String cart = "";
         double total = 0;
         double subtotal = 0;
 
-        for (int i = 0; i < itemCount; i++) {
+        for (int i = 0; i < itemCount; i++) 
+        {
             double itemTotal = itemPrices[i] * quantities[i];
             subtotal += itemTotal;
-            cart.append(itemNames[i]).append(" X ").append(quantities[i]).append(" = ").append(itemTotal).append("\n");
+            cart += itemNames[i] + " X " + quantities[i] + " = " + itemTotal + "\n";
             total += itemTotal;
         }
-        ta1.setText(cart.toString());
-    }
+        ta1.setText(cart);
+}
+
 
     public void mouseClicked(MouseEvent me) {}
-    public void mousePressed(MouseEvent me) {
-        if (me.getSource() == b5) {
-            if (itemCount == 0) {
+    public void mousePressed(MouseEvent me) 
+	{
+        if (me.getSource() == b5) // Payment
+		{
+            if (itemCount == 0) 
+			{
                 JOptionPane.showMessageDialog(this, "Cart is empty. Add items first.");
             } else {
                 JOptionPane.showMessageDialog(this, "Payment Received");
@@ -385,12 +392,14 @@ public class Resturent extends JFrame implements MouseListener, ActionListener {
     public void mouseEntered(MouseEvent me) {}
     public void mouseExited(MouseEvent me) {}
 
-    public void actionPerformed(ActionEvent ae) {
+    public void actionPerformed(ActionEvent ae) 
+	{
         if (ae.getSource() == b1) { // add to cart
             String itemName = t1.getText();
             String quantityStr = t2.getText();
 
-            if (itemName.isEmpty() || quantityStr.isEmpty()) {
+            if (itemName.isEmpty() || quantityStr.isEmpty()) 
+			{
                 JOptionPane.showMessageDialog(this, "Please Enter item name & Quantity");
             } else {
                 double price = getItemPrice(itemName.toLowerCase());
@@ -449,7 +458,7 @@ public class Resturent extends JFrame implements MouseListener, ActionListener {
                     cart();
                     JOptionPane.showMessageDialog(this, "Item removed from cart");
                     t3.setText("");
-                } 
+                }
                 else 
                 {
                     JOptionPane.showMessageDialog(this, "Item not found in cart");
@@ -476,7 +485,7 @@ public class Resturent extends JFrame implements MouseListener, ActionListener {
         
         
         
-        if (ae.getSource() == b7) {
+        if (ae.getSource() == b7) {   // reset 
             t1.setText("");
             t2.setText("");
             ta1.setText("");

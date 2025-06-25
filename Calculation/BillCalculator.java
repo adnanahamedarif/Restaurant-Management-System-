@@ -18,7 +18,8 @@ public class BillCalculator {
         this.ta2 = ta2;
     }
 
-    public void calculate(double[] itemPrices, int[] quantities, int itemCount, String currentDateTime) {
+    public void calculate(double[] itemPrices, int[] quantities, int itemCount, String currentDateTime) 
+	    {
         total = 0;
         for (int i = 0; i < itemCount; i++) {
             total += itemPrices[i] * quantities[i];
@@ -30,19 +31,22 @@ public class BillCalculator {
         else if (rb4.isSelected()) discount = 0.20;
 
         double totalDiscount = total - (total * discount);
+		
+		String bill = ta1.getText();
+        bill += "\n======================";
+        bill += "\nSubtotal: " + total + "\n";
 
-        StringBuilder bill = new StringBuilder(ta1.getText());
-        bill.append("\n======================");
-        bill.append("\nSubtotal: ").append(total).append("\n");
         if (discount > 0) {
-            bill.append("Discount: ").append(discount * 100).append("%\n");
-            bill.append("Total after discount: ").append(totalDiscount).append("\n");
+        bill += "Discount: " + (discount * 100) + "%\n";
+        bill += "Total after discount: " + totalDiscount + "\n";
         } else {
-            bill.append("Total: ").append(total).append("\n");
+        bill += "Total: " + total + "\n";
         }
-        bill.append("Date/Time: ").append(currentDateTime).append("\n");
 
-        ta1.setText(bill.toString());
-        ta2.append("Order at " + currentDateTime + ":\n" + bill.toString() + "\n\n");
+        bill += "Date/Time: " + currentDateTime + "\n";
+
+        ta1.setText(bill);
+        ta2.append("Order at " + currentDateTime + ":\n" + bill + "\n\n");
+
     }
 }
